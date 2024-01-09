@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health 100</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vital.css') }}">
+</head>
+<body>
+    <!-- <h1>Health 100 - Patient Details</h1>
+     -->
+    <div class="container">
+        <div>
+            <h2 class="graph-title">BP - systolic</h2>
+            <div class="chart-container">
+                <canvas id="bpChart"></canvas>
+                <div class="patient-details">
+                    <p>Latest Reading: Insert Reading using JS</p>
+                    <p>Status: Insert using JS</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>BP - diastolic</h2>
+            <div class="chart-container">
+                <canvas id="bpDiastolicChart"></canvas>
+                <div class="patient-details">
+                    <p>Latest Reading: Insert Reading using JS</p>
+                    <p>Status: Insert using JS</p>
+                </div>
+            </div>
+        </div>
+    
+        <div>
+            <h2>Temperature</h2>
+            <div class="chart-container">
+                <canvas id="temperatureChart"></canvas>
+                <div class="patient-details">
+                    <p>Latest Reading: Insert Reading using JS</p>
+                    <p>Status: Insert using JS</p>
+                </div>
+            </div>
+        </div>
+    
+        <div>
+            <h2>Saline Level</h2>
+            <div class="chart-container">
+                <canvas id="salineChart"></canvas>
+                <div class="patient-details">
+                    <p>Latest Reading: Insert using JS</p>
+                    <p>Status: Insert using JS</p>
+                </div>
+            </div>
+        </div>
+    
+        <div>
+            <h2>SPO2 (Blood Oxygen)</h2>
+            <div class="chart-container">
+                <canvas id="spo2Chart"></canvas>
+                <div class="patient-details">
+                    <p>Latest Reading: Insert Using JS</p>
+                    <p>Status: Insert Using JS</p>
+                </div>
+            </div>
+        </div>
+    
+        <div>
+            <h2>Heart Rate</h2>
+            <div class="chart-container">
+                <canvas id="heartRateChart"></canvas>
+                <div class="patient-details">
+                    <p>Latest Reading: Insert Using JS</p>
+                    <p>Status: Insert Using JS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="static/images/favicon.png" type="">
+
+  <title> Health 100 </title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vital.css') }}">
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <img src="static/images/hero-bg.png" alt="">
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/index">
+            <span>
+              Health 100
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/index">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about"> About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/dep">Health Records <span class="sr-only">(current)</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/depData">Patient History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/analyse">Record Analysis</a>
+              </li>
+              <!-- <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form> -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- department section -->
+
+  <section class="department_section layout_padding">
+    <div class="department_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Data Analysis 
+          </h2>
+          <p>
+            We are providing four fields for the doctor to select which can help them to understand the trend of patient's health, and also the history of their health.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/s1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Heart Rate
+                </h5>
+                <p>
+                  Keep track of your heart and ensure that it is in a healthy state
+                </p>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href="/heartRate">
+                View
+              </a>
+            </div> 
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/s2.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  SpO2 Readings
+                </h5>
+                <p>
+                  Measure your blood oxygen level and keep track of it to maintain a healthy balance
+                </p>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href="/spO2">
+                View
+              </a>
+            </div> 
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/s3.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Body Temperature
+                </h5>
+                <p>
+                  Ensure that your temperature is on a normal scale and mercury does not explode
+                </p>
+              </div>
+              <div class="btn-box">
+                <a href="/temperature">
+                  View
+                </a>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/s4.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Blood Pressure-Systolic
+                </h5>
+                <p>
+                  Keep a track of blood pressure readings so that you know when you are feeling anxious or stressed
+                </p>
+              </div>
+              <div class="btn-box">
+                <a href="/bpsys">
+                  View
+                </a>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/s4.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Blood Pressure-Diastolic
+                </h5>
+                <p>
+                  Keep a track of blood pressure readings so that you know when you are feeling anxious or stressed
+                </p>
+              </div>
+              <div class="btn-box">
+                <a href="/bpdia">
+                  View
+                </a>
+              </div> 
+            </div>
+          </div>
+
+        </div>
+        <!-- <div class="btn-box">
+          <a href="/dep">
+            View All
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </section>    
+</div>
+
+  <!-- end department section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_contact">
+            <h4>
+              Reach at..
+            </h4>
+            <div class="contact_link_box">
+              <a href="https://www.google.com/maps/place/IIIT-H+%7C+The+International+Institute+of+Information+Technology+-+Hyderabad/@17.4448649,78.3453077,17z/data=!4m10!1m2!2m1!1siiit+hyderabad+!3m6!1s0x3bce0a03f17ff82b:0x9d02e89b98deb496!8m2!3d17.4448649!4d78.3498138!15sCg5paWl0IGh5ZGVyYWJhZFoQIg5paWl0IGh5ZGVyYWJhZJIBFHRlY2huaWNhbF91bml2ZXJzaXR5mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJEYUhOcVRYTkJSUkFC4AEA!16zL20vMDQ2eWM3?entry=ttu">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="https://outlook.live.com/owa/">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="footer_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_detail">
+            <h4>
+              About
+            </h4>
+            <p>
+              Implementing an IoT based system is chosen here due to its ease of implementation and use and cost effectiveness. 
+              The model will be built in a tabletop model style with wireless data collection and an accompanying interface for ease of use by the doctor.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto footer_col">
+          <div class="footer_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="footer_links">
+              <a class="" href="/index">
+                Home
+              </a>
+              <a class="" href="/about">
+                About
+              </a>
+              <a class="" href="/dep">
+                Health Records
+              </a>
+              <a class="active" href="/depData">
+                Patient History
+              </a>
+              <a class="" href="/analyse">
+                Record Analysis
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">Free Html Templates<br><br></a>
+            &copy; <span id="displayYear"></span> Distributed By
+            <a href="https://themewagon.com/">ThemeWagon</a>
+        </p>
+      </div> -->
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="static/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="static/js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- End Google Map -->
+  <script src="{{ url_for('static', filename='newScript.js') }}"></script>
+
+</body>
+
+</html>
